@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>404 — Page not found</title>
+  <meta name="description" content="404 — The page you are looking for doesn't exist." />
+  <style>
+    :root{--bg:#f7f9fb;--card:#fff;--muted:#6b7280;--accent:#2563eb;--glass:rgba(255,255,255,0.6)}
+    @media(prefers-color-scheme:dark){:root{--bg:#0b1220;--card:#071027;--muted:#9aa6bf;--accent:#3b82f6;--glass:rgba(255,255,255,0.04)}}
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial;color:var(--muted);background:linear-gradient(180deg,var(--bg),#e9f1ff10);display:flex;align-items:center;justify-content:center;padding:32px}
+    .card{width:100%;max-width:980px;background:linear-gradient(180deg, rgba(255,255,255,0.6), rgba(255,255,255,0.4));backdrop-filter:blur(6px);border-radius:14px;padding:34px;display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center;box-shadow:0 10px 30px rgba(2,6,23,0.08)}
+    @media(max-width:880px){.card{grid-template-columns:1fr;max-width:720px;padding:22px}}
+    h1{margin:0;font-size:clamp(28px,4vw,44px);color:var(--accent);letter-spacing:-0.02em}
+    p.lead{margin:12px 0 22px;font-size:15px;color:var(--muted)}
+    .actions{display:flex;gap:12px;flex-wrap:wrap}
+    .btn{display:inline-flex;align-items:center;gap:10px;padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:600;border:0;cursor:pointer}
+    .btn-primary{background:var(--accent);color:white;box-shadow:0 6px 18px rgba(37,99,235,0.18)}
+    .btn-ghost{background:transparent;border:1px solid rgba(99,102,241,0.08);color:var(--muted)}
+    .search{display:flex;gap:8px;margin-top:12px}
+    .search input{flex:1;padding:12px;border-radius:10px;border:1px solid #e6eefc;background:transparent;outline:none;font-size:14px}
+    .search button{padding:10px 12px;border-radius:10px;border:0;background:var(--accent);color:#fff}
+    .illustration{display:flex;align-items:center;justify-content:center}
+    .meta{font-size:13px;color:var(--muted);margin-top:12px}
+    .logo{display:flex;gap:12px;align-items:center}
+    .logo svg{height:36px;width:36px}
+    footer{margin-top:18px;font-size:12px;color:var(--muted)}
+    /* subtle floating animation */
+    .float{animation:float 6s ease-in-out infinite}
+    @keyframes float{0%{transform:translateY(0)}50%{transform:translateY(-8px)}100%{transform:translateY(0)}}
+    /* accessibility */
+    .visually-hidden{position:absolute!important;height:1px;width:1px;overflow:hidden;clip:rect(1px,1px,1px,1px);white-space:nowrap}
+  </style>
+</head>
+<body>
+  <main class="card" role="main" aria-labelledby="title">
+    <section>
+      <div class="logo" aria-hidden="true">
+        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Site logo">
+          <rect width="48" height="48" rx="10" fill="url(#g)"/>
+          <defs>
+            <linearGradient id="g" x1="0" x2="1">
+              <stop offset="0" stop-color="#60a5fa"/>
+              <stop offset="1" stop-color="#3b82f6"/>
+            </linearGradient>
+          </defs>
+          <path d="M14 33c6 0 8-6 12-14" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <div>
+          <strong style="color:var(--accent);font-size:16px">YourSite</strong>
+          <div style="font-size:12px;color:var(--muted)">Not found</div>
+        </div>
+      </div>
+
+      <h1 id="title">404 — Page not found</h1>
+      <p class="lead">Hmm — the page you were trying to reach doesn't exist. It might have been moved or the link is broken. Here are a few options to get you back on track.</p>
+
+      <div class="actions" aria-hidden="false">
+        <a href="/" class="btn btn-primary" role="button">Home</a>
+        <a href="https://www.itisuniqueofficial.com/sitemap.xml" class="btn btn-ghost">Sitemap</a>
+        <a href="https://in.linkedin.com/in/iamjaydatt" class="btn btn-ghost">Contact support</a>
+      </div>
+
+      <form class="search" action="https://www.itisuniqueofficial.com/search" method="get" role="search" aria-label="Search site">
+        <input name="q" type="search" placeholder="Search the site..." aria-label="Search the site">
+        <button type="submit" aria-label="Search">Search</button>
+      </form>
+
+      <div class="meta">Tip: check for typos or return to the homepage. If you got here from a link, let us know so we can fix it.</div>
+
+      <footer>
+        <span>© <span id="year"></span> YourSite — <a href="/privacy">Privacy</a></span>
+      </footer>
+    </section>
+
+    <aside class="illustration" aria-hidden="true">
+      <!-- Inline SVG illustration (scalable, no external assets) -->
+      <svg class="float" width="420" height="300" viewBox="0 0 720 520" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Sad map illustration">
+        <rect x="0" y="0" width="720" height="520" rx="20" fill="transparent"/>
+        <g transform="translate(60,40)">
+          <circle cx="240" cy="160" r="120" fill="#eaf2ff"/>
+          <path d="M80 220c24-56 88-92 160-92s136 36 160 92" fill="#fff" stroke="#dbeafe" stroke-width="6"/>
+          <g transform="translate(120,60)">
+            <rect x="0" y="0" width="90" height="70" rx="10" fill="#fff" stroke="#c7ddff"/>
+            <rect x="110" y="20" width="160" height="90" rx="12" fill="#fff" stroke="#c7ddff"/>
+            <circle cx="60" cy="40" r="6" fill="#ffd1d1"/>
+          </g>
+          <text x="240" y="180" text-anchor="middle" fill="#93c5fd" font-size="28" font-family="Inter, Arial" font-weight="700">404</text>
+        </g>
+      </svg>
+    </aside>
+  </main>
+
+  <script>
+    // progressive enhancement: set year and handle search fallback
+    document.getElementById('year').textContent = new Date().getFullYear();
+    // If JavaScript router exists, allow home button to use history
+    (function(){
+      var home = document.querySelector('.btn-primary');
+      if(home && history && history.pushState){
+        home.addEventListener('click', function(e){
+          // let normal navigation proceed — this is just a friendly enhancement point
+        });
+      }
+    })();
+  </script>
+</body>
+</html>
